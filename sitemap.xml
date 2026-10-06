@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Replace YOUR-DOMAIN.example with the final production domain before deployment. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://YOUR-DOMAIN.example/index.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/car-wash.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/auto-services.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/car-care-guide.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/contact.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/articles/when-to-change-car-oil.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/articles/wheel-alignment-signs.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/articles/car-wash-care-al-ain.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/articles/car-battery-warning-signs.html</loc></url>
+  <url><loc>https://albateenstation.ae/</loc></url>
+  <url><loc>https://albateenstation.ae/car-wash.html</loc></url>
+  <url><loc>https://albateenstation.ae/auto-services.html</loc></url>
+  <url><loc>https://albateenstation.ae/car-care-guide.html</loc></url>
+  <url><loc>https://albateenstation.ae/contact.html</loc></url>
+  <url><loc>https://albateenstation.ae/articles/when-to-change-car-oil.html</loc></url>
+  <url><loc>https://albateenstation.ae/articles/wheel-alignment-signs.html</loc></url>
+  <url><loc>https://albateenstation.ae/articles/car-wash-care-al-ain.html</loc></url>
+  <url><loc>https://albateenstation.ae/articles/car-battery-warning-signs.html</loc></url>
 </urlset>

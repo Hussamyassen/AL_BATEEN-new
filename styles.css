@@ -917,3 +917,387 @@ html[dir="ltr"] .guide-hero-overlay{background:linear-gradient(to right,rgba(5,1
   .guide-card-image{height:165px}
   .guide-card-body{padding:15px 16px 17px}
 }
+
+/* FINAL STATION POSITIONING UPDATE — HOME + AUTO + CAR WASH */
+
+/* HOME — premium lightweight slider */
+.station-hero-slider{
+  position:relative;
+  min-height:700px;
+  background:var(--navy);
+  color:#fff;
+  overflow:hidden;
+}
+.station-slide{
+  position:absolute;
+  inset:0;
+  padding-top:80px;
+  opacity:0;
+  visibility:hidden;
+  transform:translateX(16px);
+  transition:opacity .55s ease, transform .55s ease, visibility .55s;
+}
+html[dir="ltr"] .station-slide{transform:translateX(-16px)}
+.station-slide.is-active{
+  position:relative;
+  opacity:1;
+  visibility:visible;
+  transform:none;
+  z-index:2;
+}
+.station-slide-grid{
+  min-height:620px;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  align-items:center;
+  gap:54px;
+}
+.station-slide-copy{padding-block:62px 78px;max-width:590px}
+.station-slide-copy h1,.station-slide-copy h2{
+  font-size:clamp(43px,5vw,64px);
+  line-height:1.2;
+  letter-spacing:-.02em;
+  margin:18px 0 14px;
+  color:#fff;
+}
+html[lang="ar"] .station-slide-copy h1,
+html[lang="ar"] .station-slide-copy h2{line-height:1.34}
+.station-slide-copy p{
+  max-width:570px;
+  margin:0;
+  color:rgba(255,255,255,.78);
+  font-size:16.5px;
+  line-height:1.9;
+}
+.station-slide-media{
+  height:540px;
+  min-width:0;
+  overflow:hidden;
+  border-radius:24px;
+  background:#091b36;
+  box-shadow:0 24px 70px rgba(0,0,0,.26);
+}
+.station-slide-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 48%;
+}
+.station-slide-media-foam img{object-position:center 50%}
+.station-slide .hero-meta{margin-top:27px}
+.hero-slider-controls{
+  position:absolute;
+  z-index:6;
+  left:50%;
+  bottom:22px;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  gap:13px;
+}
+.hero-control{
+  width:39px;height:39px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.08);
+  color:#fff;font-size:25px;line-height:1;
+  display:grid;place-items:center;cursor:pointer;
+  transition:background .18s ease,border-color .18s ease;
+}
+.hero-control:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.34)}
+.hero-dots{display:flex;align-items:center;gap:7px}
+.hero-dot{
+  width:8px;height:8px;border:0;border-radius:50%;
+  background:rgba(255,255,255,.32);padding:0;cursor:pointer;
+  transition:width .18s ease,border-radius .18s ease,background .18s ease;
+}
+.hero-dot.is-active{width:24px;border-radius:999px;background:var(--pink)}
+
+/* Home introduction */
+.station-intro-section{background:#fff}
+.station-intro{
+  display:grid;
+  grid-template-columns:.88fr 1.12fr;
+  gap:64px;
+  align-items:center;
+}
+.station-intro-copy h2,
+.alignment-feature-copy h2,
+.oil-feature-copy h2,
+.washwax-copy h2,
+.auto-photo-copy h2{
+  font-size:clamp(32px,3.7vw,47px);
+  line-height:1.3;
+  color:var(--navy);
+  margin:9px 0 15px;
+  letter-spacing:-.018em;
+}
+html[lang="ar"] .station-intro-copy h2,
+html[lang="ar"] .alignment-feature-copy h2,
+html[lang="ar"] .oil-feature-copy h2,
+html[lang="ar"] .washwax-copy h2,
+html[lang="ar"] .auto-photo-copy h2{line-height:1.45}
+.station-intro-copy p,
+.alignment-feature-copy>p,
+.oil-feature-copy>p,
+.washwax-copy>p,
+.auto-photo-copy>p{
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.95;
+  margin:0;
+}
+.station-intro-image{
+  margin:0;
+  height:480px;
+  overflow:hidden;
+  border-radius:22px;
+  background:var(--soft);
+  box-shadow:var(--shadow-soft);
+}
+.station-intro-image img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
+
+/* Home visual services */
+.home-services-overview{background:var(--soft)}
+.photo-services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.photo-service-card{
+  background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;
+  min-width:0;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.photo-service-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-soft);border-color:#d7e0e9}
+.photo-service-image{display:block;height:235px;overflow:hidden;background:#e7ebf0}
+.photo-service-image img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.photo-service-card:nth-child(1) .photo-service-image img{object-position:center 52%}
+.photo-service-card:nth-child(2) .photo-service-image img{object-position:center 50%}
+.photo-service-card:nth-child(3) .photo-service-image img{object-position:center 48%}
+.photo-service-card:nth-child(4) .photo-service-image img{object-position:center 43%}
+.photo-service-card:nth-child(5) .photo-service-image img{object-position:center 47%}
+.photo-service-card:nth-child(6) .photo-service-image img{object-position:center 45%}
+.photo-service-card:hover .photo-service-image img{transform:scale(1.018)}
+.photo-service-copy{padding:18px 19px 19px}
+.photo-service-copy h3{margin:0 0 6px;color:var(--navy);font-size:17px;line-height:1.45}
+.photo-service-copy p{margin:0 0 12px;color:var(--muted);font-size:12.5px;line-height:1.75}
+.photo-service-copy>a{color:var(--blue);font-size:12px;font-weight:800}
+
+/* Home alignment feature */
+.alignment-feature-section{background:#fff}
+.alignment-feature{
+  display:grid;
+  grid-template-columns:.78fr 1.22fr;
+  gap:58px;
+  align-items:center;
+}
+.alignment-feature-copy .btn{margin-top:24px}
+.simple-points{
+  list-style:none;padding:0;margin:22px 0 0;
+  display:grid;grid-template-columns:1fr 1fr;gap:9px;
+}
+.simple-points li{
+  position:relative;padding:12px 13px 12px 32px;
+  background:var(--soft);border:1px solid #edf1f5;border-radius:12px;
+  color:var(--navy);font-size:12.5px;font-weight:700;
+}
+html[dir="rtl"] .simple-points li{padding:12px 32px 12px 13px}
+.simple-points li::before{
+  content:"";position:absolute;left:13px;top:50%;transform:translateY(-50%);
+  width:7px;height:7px;border-radius:50%;background:var(--pink);
+}
+html[dir="rtl"] .simple-points li::before{left:auto;right:13px}
+.alignment-photo-layout{
+  display:grid;
+  grid-template-columns:1.4fr .8fr;
+  grid-template-rows:1fr 1fr;
+  gap:10px;
+  min-height:560px;
+}
+.alignment-photo-layout figure{margin:0;overflow:hidden;border-radius:17px;background:#e8edf3}
+.alignment-photo-main{grid-row:1/3}
+.alignment-photo-layout img{width:100%;height:100%;object-fit:cover}
+.alignment-photo-main img{object-position:center 46%}
+
+/* Home oil / wash & wax */
+.oil-feature-section{background:var(--navy);color:#fff}
+.oil-feature{display:grid;grid-template-columns:1.08fr .92fr;gap:58px;align-items:center}
+.oil-photo-pair{display:grid;grid-template-columns:1.15fr .85fr;gap:10px;height:500px}
+.oil-photo-pair figure{margin:0;overflow:hidden;border-radius:18px;background:#0a1c38}
+.oil-photo-pair img{width:100%;height:100%;object-fit:cover}
+.oil-photo-main img{object-position:center 48%}
+.oil-feature-copy h2{color:#fff}
+.oil-feature-copy>p{color:rgba(255,255,255,.7)}
+.availability-note{
+  font-size:11.5px!important;
+  line-height:1.75!important;
+  opacity:.76;
+  margin-top:15px!important;
+}
+.oil-feature-copy .btn{margin-top:21px;background:#fff}
+
+.washwax-feature-section{background:#fff}
+.washwax-feature{display:grid;grid-template-columns:1fr 1fr;gap:62px;align-items:center}
+.washwax-image{margin:0;height:540px;border-radius:22px;overflow:hidden;background:#f3f4f7;box-shadow:var(--shadow-soft)}
+.washwax-image img{width:100%;height:100%;object-fit:cover;object-position:center 48%}
+.washwax-points{margin-bottom:24px}
+
+/* Home gallery */
+.real-gallery-section{background:var(--soft)}
+.real-gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.real-gallery-item{margin:0;background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden}
+.real-gallery-item img{width:100%;height:220px;object-fit:cover}
+.real-gallery-item figcaption{padding:11px 13px;color:var(--navy);font-size:11.5px;font-weight:800}
+
+/* AUTO SERVICES enriched sections */
+.upgraded-auto-hero .hero-media img{object-position:center 49%}
+.auto-alignment-section{background:#fff}
+.auto-alignment-layout{display:grid;grid-template-columns:1.18fr .82fr;gap:52px;align-items:center}
+.auto-alignment-gallery{
+  display:grid;grid-template-columns:1.3fr .7fr;grid-template-rows:1fr 1fr;gap:10px;min-height:540px
+}
+.auto-alignment-gallery figure{margin:0;border-radius:17px;overflow:hidden;background:#e9edf3}
+.auto-alignment-main{grid-row:1/3}
+.auto-alignment-gallery img{width:100%;height:100%;object-fit:cover}
+.alignment-indicators h3{font-size:25px;color:var(--navy);line-height:1.45;margin:0 0 9px}
+.alignment-indicators>p{font-size:13.5px;line-height:1.85;color:var(--muted);margin:0 0 18px}
+.indicator-list{border-top:1px solid var(--line)}
+.indicator-list>div{display:flex;align-items:center;gap:14px;min-height:62px;border-bottom:1px solid var(--line)}
+.indicator-list span{font-family:Inter,sans-serif;color:var(--pink);font-size:11px;font-weight:800}
+.indicator-list b{color:var(--navy);font-size:13.5px;line-height:1.55}
+
+.auto-oil-section{background:var(--soft)}
+.auto-tyres-section{background:#fff}
+.auto-photo-split{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center}
+.auto-photo-split-reverse .auto-photo-block{order:2}
+.auto-photo-split-reverse .auto-photo-copy{order:1}
+.auto-photo-block{height:500px;border-radius:20px;overflow:hidden;background:#e9edf3}
+.auto-photo-block img{width:100%;height:100%;object-fit:cover}
+.tyre-photo-block img{object-position:center 41%}
+.auto-photo-copy .availability-note{color:var(--muted);opacity:1}
+.service-label-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:20px 0}
+.service-label-grid span{
+  border:1px solid var(--line);border-radius:11px;background:var(--soft);
+  padding:12px 13px;color:var(--navy);font-size:12.5px;font-weight:750
+}
+.other-auto-services{background:var(--soft)}
+.verified-services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.verified-service{
+  min-height:82px;display:flex;align-items:center;padding:16px;
+  border:1px solid var(--line);border-radius:14px;background:#fff
+}
+.verified-service strong{color:var(--navy);font-size:13px;line-height:1.5}
+.auto-support-images{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.auto-support-images figure{margin:0;height:300px;border-radius:17px;overflow:hidden;background:#e9edf3}
+.auto-support-images img{width:100%;height:100%;object-fit:cover}
+
+/* CAR WASH Wash & Wax feature */
+.carwash-washwax{background:var(--soft)}
+.carwash-washwax-grid{display:grid;grid-template-columns:.83fr 1.17fr;gap:58px;align-items:center}
+.carwash-washwax-copy h2{
+  font-size:clamp(31px,3.5vw,45px);line-height:1.32;color:var(--navy);
+  margin:9px 0 14px;letter-spacing:-.018em
+}
+html[lang="ar"] .carwash-washwax-copy h2{line-height:1.46}
+.carwash-washwax-copy p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.95}
+.washwax-mini-points{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.washwax-mini-points span{padding:8px 11px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:11.5px;font-weight:750;color:var(--navy)}
+.washwax-story{display:grid;grid-template-columns:1.3fr .7fr;grid-template-rows:1fr 1fr;gap:10px;min-height:520px}
+.washwax-story figure{margin:0;position:relative;overflow:hidden;border-radius:17px;background:#e8edf3}
+.washwax-story-main{grid-row:1/3}
+.washwax-story img{width:100%;height:100%;object-fit:cover}
+.washwax-story figcaption{
+  position:absolute;inset-inline-start:10px;bottom:10px;
+  padding:6px 9px;border-radius:9px;background:rgba(16,40,79,.87);color:#fff;
+  font-size:10.5px;font-weight:800
+}
+
+/* Responsive */
+@media(max-width:980px){
+  .station-slide-grid{grid-template-columns:1fr 1fr;gap:30px}
+  .station-slide-media{height:500px}
+  .photo-services-grid{grid-template-columns:1fr 1fr}
+  .station-intro,.alignment-feature,.oil-feature,.washwax-feature,.auto-alignment-layout,.auto-photo-split,.carwash-washwax-grid{grid-template-columns:1fr;gap:36px}
+  .station-intro-image,.washwax-image,.auto-photo-block{height:450px}
+  .alignment-photo-layout,.auto-alignment-gallery,.washwax-story{min-height:500px}
+  .verified-services-grid{grid-template-columns:1fr 1fr}
+  .auto-photo-split-reverse .auto-photo-block,.auto-photo-split-reverse .auto-photo-copy{order:initial}
+}
+
+@media(max-width:720px){
+  .station-hero-slider{min-height:760px}
+  .station-slide{padding-top:64px}
+  .station-slide-grid{
+    min-height:690px;
+    grid-template-columns:1fr;
+    gap:0;
+    align-content:start;
+  }
+  .station-slide-copy{padding:35px 0 22px;max-width:none}
+  .station-slide-copy h1,.station-slide-copy h2{font-size:35px;margin:14px 0 10px}
+  .station-slide-copy p{font-size:14px;line-height:1.85}
+  .station-slide-copy .hero-actions{margin-top:19px}
+  .station-slide-copy .hero-actions .btn{min-height:48px}
+  .station-slide .hero-meta{margin-top:17px}
+  .station-slide-media{
+    height:295px;
+    border-radius:17px;
+    margin-bottom:62px;
+  }
+  .station-slide-media-foam img{object-position:center 47%}
+  .hero-slider-controls{bottom:15px}
+
+  .station-intro-image,.washwax-image,.auto-photo-block{height:360px}
+  .photo-services-grid{grid-template-columns:1fr 1fr;gap:9px}
+  .photo-service-image{height:170px}
+  .photo-service-copy{padding:14px}
+  .photo-service-copy h3{font-size:14.5px}
+  .photo-service-copy p{font-size:11.5px}
+  .alignment-photo-layout,.auto-alignment-gallery,.washwax-story{min-height:400px}
+  .oil-photo-pair{height:390px}
+  .simple-points{grid-template-columns:1fr}
+  .real-gallery-grid{grid-template-columns:1fr 1fr;gap:9px}
+  .real-gallery-item img{height:165px}
+  .verified-services-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .verified-service{min-height:68px;padding:13px}
+  .auto-support-images{grid-template-columns:1fr}
+  .auto-support-images figure{height:240px}
+  .service-label-grid{grid-template-columns:1fr 1fr}
+  .carwash-washwax-copy p,.auto-photo-copy>p{font-size:13.5px}
+}
+
+@media(max-width:480px){
+  .photo-services-grid{grid-template-columns:1fr}
+  .photo-service-image{height:215px}
+  .real-gallery-grid{grid-template-columns:1fr 1fr}
+  .real-gallery-item img{height:145px}
+  .alignment-photo-layout,.auto-alignment-gallery,.washwax-story{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:260px 160px;
+    min-height:0;
+  }
+  .alignment-photo-main,.auto-alignment-main,.washwax-story-main{grid-column:1/3;grid-row:1}
+  .oil-photo-pair{grid-template-columns:1fr 1fr;height:330px}
+  .verified-services-grid{grid-template-columns:1fr 1fr}
+  .service-label-grid{grid-template-columns:1fr}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .station-slide{transition:none!important}
+}
+
+/* OFFICIAL LOGO REVISION */
+.brand-logo{
+  width:104px;
+  height:46px;
+  object-fit:contain;
+  object-position:center;
+  background:#fff;
+  border-radius:9px;
+  padding:3px 5px;
+}
+.footer-brand .brand-logo{width:98px;height:42px}
+@media(max-width:720px){
+  .brand-logo{width:74px;height:35px;padding:2px 4px;border-radius:8px}
+  .brand-copy strong{font-size:12.5px}
+  .brand-copy small{font-size:8.5px}
+}
+@media(max-width:390px){
+  .brand-copy{display:none}
+  .brand-logo{width:82px;height:36px}
+}
